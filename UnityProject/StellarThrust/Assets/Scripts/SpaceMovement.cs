@@ -9,7 +9,7 @@ public class SpaceMovement : MonoBehaviour
     void Start()
     {
         for(int i = 0;i < 30;i++) {
-            Instantiate(rock, new Vector3(Random.Range(-60, 80), Random.Range(-30, 60), Random.Range(0, 20)), Quaternion.identity);
+            Instantiate(rock, new Vector3(Random.Range(-60, 80), Random.Range(-30, 60), Random.Range(5, 20)), Quaternion.identity);
         }
         InvokeRepeating("CreateRocks",0,4);
         
