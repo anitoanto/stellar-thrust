@@ -10,7 +10,7 @@ public class Rock : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         gameObject.transform.rotation = Random.rotation;
-        Destroy(gameObject,Random.Range(40,50));
+        Destroy(gameObject,Random.Range(90,150));
         
     }
 
