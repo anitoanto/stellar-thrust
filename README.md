@@ -4,3 +4,4 @@ Game Oasis San Francisco
 # Play the game : https://github.com/anitoanto/stellar-thrust/tree/master/Windows%20Export
 # GamePlay VIDEO : https://drive.google.com/open?id=1Cr734kc1BbuWTOfJ-Lm08Pie4sbzeIwv
 ## Screen shots can be found in the "screenshots" folder.
+Need to integrate the score with Contentos.
