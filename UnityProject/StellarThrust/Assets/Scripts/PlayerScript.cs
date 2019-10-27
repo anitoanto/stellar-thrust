@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class PlayerScript : MonoBehaviour
 {
     public Text sc;
+    public GameObject btn;
     public GameObject ground;
     public GameObject fire;
     public GameObject winscreen;
@@ -19,6 +21,7 @@ public class PlayerScript : MonoBehaviour
         initialpos = transform.position;
         gpos = ground.transform.position;
         fire.SetActive(false);
+        btn.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class PlayerScript : MonoBehaviour
         if (transform.position.x > 124 )
         {
             winscreen.SetActive(true);
+            btn.SetActive(true);
         }
         
 
@@ -82,5 +86,25 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("ok");
         }
+    }
+
+    IEnumerator GetRequest(string uri)
+{
+    UnityWebRequest uwr = UnityWebRequest.Get(uri);
+    yield return uwr.SendWebRequest();
+
+    if (uwr.isNetworkError)
+    {
+        Debug.Log("Error While Sending: " + uwr.error);
+    }
+    else
+    {
+        Debug.Log("Received: " + uwr.downloadHandler.text);
+    }
+}
+
+    public void Coin()
+    {
+        StartCoroutine(GetRequest("https://conentos-handler.herokuapp.com/"));
     }
 }
