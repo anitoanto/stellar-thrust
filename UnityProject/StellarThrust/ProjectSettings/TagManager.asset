@@ -6,6 +6,8 @@ TagManager:
   tags:
   - winner
   - enemytag
+  - pointtag
+  - hero
   layers:
   - Default
   - TransparentFX

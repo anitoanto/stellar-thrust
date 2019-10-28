@@ -7,25 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
-    public Text sc;
+    public Text hrrSctxt;
     public GameObject ground;
     public GameObject fire;
     Vector3 initialpos;
     Vector3 gpos;
-    int s = 0;
+    int cStat = 0;
     // Start is called before the first frame update
     void Start()
     {
         initialpos = transform.position;
         gpos = ground.transform.position;
         fire.SetActive(false);
+        hrrSctxt.text = "Collection : " + cStat.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        s = (int)transform.position.x + 50;
-        sc.text = "Score : " + s.ToString();
 
         var speed = 18;
 
@@ -81,6 +80,11 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "enemytag")
         {
             SceneManager.LoadScene("Lost");
+        }
+        if (collision.gameObject.tag == "pointtag")
+        {
+            cStat += 1;
+            hrrSctxt.text = "Collection : " + cStat.ToString();
         }
     }
 
