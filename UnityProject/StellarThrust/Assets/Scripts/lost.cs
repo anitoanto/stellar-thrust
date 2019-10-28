@@ -9,7 +9,7 @@ public class lost : MonoBehaviour
     public GameObject revivebtn;
     public GameObject restartbtn;
     public GameObject quitbtn;
-    string UrlForRevive = "";
+    string UrlForRevive = "https://block-contentos.herokuapp.com/transact";
     
     // Start is called before the first frame update
     void Start()

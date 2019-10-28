@@ -12,8 +12,8 @@ public class menuviewScript : MonoBehaviour
     public GameObject quitBtn;
     public GameObject AddCoinBtn;
     public GameObject SeeProfileBtn;
-    string UrlForAddCoin = "";
-    string UrlForSeeProfile = "";
+    string UrlForAddCoin = "?v=";
+    string UrlForSeeProfile = "?v=";
     int cvalue;
     // Start is called before the first frame update
     void Start()
