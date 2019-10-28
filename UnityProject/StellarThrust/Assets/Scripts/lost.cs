@@ -14,7 +14,12 @@ public class lost : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(PlayerPrefs.GetInt("collectionStellarthrust",0) < 50){
+            PlayerPrefs.SetInt("collectionStellarthrust",0);
+        }
+        else{
+            PlayerPrefs.SetInt("collectionStellarthrust",PlayerPrefs.GetInt("collectionStellarthrust",0) - 50);
+        }
     }
 
     // Update is called once per frame

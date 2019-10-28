@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour
     Vector3 initialpos;
     Vector3 gpos;
     int cStat = 0;
+    int ex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class PlayerScript : MonoBehaviour
         gpos = ground.transform.position;
         fire.SetActive(false);
         hrrSctxt.text = "Collection : " + cStat.ToString();
+        ex = PlayerPrefs.GetInt("collectionStellarthrust",0);
     }
 
     // Update is called once per frame
@@ -85,6 +87,7 @@ public class PlayerScript : MonoBehaviour
         {
             cStat += 1;
             hrrSctxt.text = "Collection : " + cStat.ToString();
+            PlayerPrefs.SetInt("collectionStellarthrust",ex + cStat);
         }
     }
 
