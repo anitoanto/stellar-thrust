@@ -28,6 +28,7 @@ public class lost : MonoBehaviour
         
     }
 
+/* 
     IEnumerator GetRequest(string uri)
     {
         UnityWebRequest uwr = UnityWebRequest.Get(uri);
@@ -43,10 +44,11 @@ public class lost : MonoBehaviour
             //display or goto url
         }
     }
-
+*/
     public void ReviveFun()
     {
-        StartCoroutine(GetRequest(UrlForRevive));
+        //StartCoroutine(GetRequest(UrlForRevive));
+        Application.OpenURL(UrlForRevive);
     }
     public void RestartFun()
     {

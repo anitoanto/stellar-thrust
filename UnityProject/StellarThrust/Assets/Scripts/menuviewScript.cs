@@ -27,9 +27,10 @@ public class menuviewScript : MonoBehaviour
     {
         
     }
-
+/*
     IEnumerator GetRequest(string uri)
     {
+        
         UnityWebRequest uwr = UnityWebRequest.Get(uri);
         yield return uwr.SendWebRequest();
 
@@ -40,18 +41,42 @@ public class menuviewScript : MonoBehaviour
         else
         {
             Debug.Log("Received: " + uwr.downloadHandler.text);
-            //display or goto url
+        PlayerPrefs.SetInt("collectionStellarthrust",0);
+        PlayerPrefs.SetInt("collectiontotalStellarthrust",PlayerPrefs.GetInt("collectiontotalStellarthrust",0) + coins);
+
+            //display or goto url withs coins(int)
         }
     }
+    IEnumerator GetRequestseepro(string uri)
+    {
+        
+        UnityWebRequest uwr = UnityWebRequest.Get(uri);
+        yield return uwr.SendWebRequest();
 
+        if (uwr.isNetworkError)
+        {
+            Debug.Log("Error While Sending: " + uwr.error);
+        }
+        else
+        {
+            Debug.Log("Received: " + uwr.downloadHandler.text);
+            //display or goto url with totalcoin(int)
+        }
+    }
+ */
     public void AddCoinBtnFun()
     {
+        int coins = PlayerPrefs.GetInt("collectionStellarthrust",0);
+        int totalcoin = PlayerPrefs.GetInt("collectiontotalStellarthrust",0);
         PlayerPrefs.SetInt("collectionStellarthrust",0);
-        StartCoroutine(GetRequest(UrlForAddCoin));
+        PlayerPrefs.SetInt("collectiontotalStellarthrust",PlayerPrefs.GetInt("collectiontotalStellarthrust",0) + coins);
+        Application.OpenURL(UrlForAddCoin + coins.ToString());
+        //StartCoroutine(GetRequest(UrlForAddCoin));
     }
     public void SeeProfileBtnFun()
     {
-        StartCoroutine(GetRequest(UrlForSeeProfile));
+        int totalcoin = PlayerPrefs.GetInt("collectiontotalStellarthrust",0);
+        Application.OpenURL(UrlForSeeProfile + totalcoin.ToString());
     }
     public void QuitFunnn()
     {
