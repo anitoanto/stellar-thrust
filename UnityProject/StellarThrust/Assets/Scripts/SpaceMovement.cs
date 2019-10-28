@@ -24,7 +24,7 @@ public class SpaceMovement : MonoBehaviour
     void CreateRocks()
     {
         for(int i = 0;i < 10;i++) {
-            Instantiate(rock, new Vector3(Random.Range(70, 180), Random.Range(-30, 60), Random.Range(0, 20)), Quaternion.identity);
+            Instantiate(rock, new Vector3(Random.Range(70, 200), Random.Range(-30, 60), Random.Range(0, 20)), Quaternion.identity);
         }
     }
 }

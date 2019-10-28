@@ -3,25 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
     public Text sc;
-    public GameObject btn;
     public GameObject ground;
     public GameObject fire;
-    public GameObject winscreen;
     Vector3 initialpos;
     Vector3 gpos;
     int s = 0;
     // Start is called before the first frame update
     void Start()
     {
-        winscreen.SetActive(false);
         initialpos = transform.position;
         gpos = ground.transform.position;
         fire.SetActive(false);
-        btn.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     {
         s = (int)transform.position.x + 50;
         sc.text = "Score : " + s.ToString();
+
         var speed = 18;
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -39,26 +37,22 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
-        
+
         if (Input.GetKey(KeyCode.DownArrow) && transform.position.y > -14.1)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
-        if (transform.position.x > 124 )
-        {
-            winscreen.SetActive(true);
-            btn.SetActive(true);
-        }
-        
+
+        //from here
 
     }
     void FixedUpdate()
 
     {
         ground.transform.position = gpos;
-        if(transform.position.y > initialpos.y && (!Input.GetKeyDown(KeyCode.UpArrow) || !Input.GetKeyDown(KeyCode.Space)))
+        if (transform.position.y > initialpos.y && (!Input.GetKeyDown(KeyCode.UpArrow) || !Input.GetKeyDown(KeyCode.Space)))
         {
-            transform.position += Vector3.down * 5 * Time.deltaTime;
+            transform.position += Vector3.down * 20 * Time.deltaTime;
             fire.SetActive(false);
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space) && transform.position.y < 0)
@@ -70,41 +64,24 @@ public class PlayerScript : MonoBehaviour
             initialpos = transform.position;
         }
         
+        //from here
+
     }
     void jump()
     {
         if (transform.position.y < initialpos.y + 10)
         {
             fire.SetActive(true);
-        transform.position += Vector3.up * 40 * Time.deltaTime;
+            transform.position += Vector3.up * 40 * Time.deltaTime;
         }
-                //transform.position += Vector3.up * 2 * Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "winner")
+        if (collision.gameObject.tag == "enemytag")
         {
-            Debug.Log("ok");
+            SceneManager.LoadScene("Lost");
         }
     }
 
-    IEnumerator GetRequest(string uri)
-{
-    UnityWebRequest uwr = UnityWebRequest.Get(uri);
-    yield return uwr.SendWebRequest();
-
-    if (uwr.isNetworkError)
-    {
-        Debug.Log("Error While Sending: " + uwr.error);
-    }
-    else
-    {
-        Debug.Log("Received: " + uwr.downloadHandler.text);
-    }
-}
-
-    public void Coin()
-    {
-        StartCoroutine(GetRequest("https://conentos-handler.herokuapp.com/"));
-    }
 }
