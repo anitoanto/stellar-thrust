@@ -66,7 +66,7 @@ public class menuviewScript : MonoBehaviour
  */
     public void AddCoinBtnFun()
     {
-        int coins = PlayerPrefs.GetInt("collectionStellarthrust",0);
+        int coins = 10;
         int totalcoin = PlayerPrefs.GetInt("collectiontotalStellarthrust",0);
         PlayerPrefs.SetInt("collectionStellarthrust",0);
         PlayerPrefs.SetInt("collectiontotalStellarthrust",PlayerPrefs.GetInt("collectiontotalStellarthrust",0) + coins);
