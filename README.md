@@ -34,8 +34,6 @@ and Elaine.
 ![Screenshot_32](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_32.png)
 
  ![Screenshot_34](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_34.png)
-
- ![Screenshot_37](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_37.png)
  
  ![Screenshot_42](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_42.png)
   
