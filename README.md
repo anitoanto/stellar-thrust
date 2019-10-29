@@ -18,7 +18,7 @@ By **HashDevelopers**
 
 A team comprising of four humble developers 
 [gaharavara](https://github.com/gaharavara), [anitoanto](https://github.com/anitoanto), [Mridularora18](https://github.com/Mridularora18),
-and Elaine.
+and [Elaine](https://github.com/MackRoe).
 
 
  # Screenshots :camera:
