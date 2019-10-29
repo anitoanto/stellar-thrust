@@ -9,7 +9,7 @@ This game was made With contentos blockchain integration.
 
 To launch the build navigate to Windows Export Folder and run StellarThrust.exe file and enjoy the Game!
 
-Block-chain code of this game can be found here [Blockchain-code](https://github.com/gaharavara/hello-block-cos)
+Code for integration of this game with *Contentos Blockchain* for in-game transactions can be found here **[hello-block-cos](https://github.com/gaharavara/hello-block-cos)**
 
 
 # Made with :heart:
@@ -34,8 +34,6 @@ and Elaine.
 ![Screenshot_32](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_32.png)
 
  ![Screenshot_34](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_34.png)
-
- ![Screenshot_37](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_37.png)
  
  ![Screenshot_42](https://github.com/anitoanto/stellar-thrust/blob/master/Final%20Shots/Screenshot_42.png)
   
