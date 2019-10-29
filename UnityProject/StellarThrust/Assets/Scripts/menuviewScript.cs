@@ -12,8 +12,8 @@ public class menuviewScript : MonoBehaviour
     public GameObject quitBtn;
     public GameObject AddCoinBtn;
     public GameObject SeeProfileBtn;
-    string UrlForAddCoin = "?v=";
-    string UrlForSeeProfile = "?v=";
+    string UrlForAddCoin = "https://block-contentos.herokuapp.com/transact?coins=";
+    string UrlForSeeProfile = "https://block-contentos.herokuapp.com/account?totalcoins=";
     int cvalue;
     // Start is called before the first frame update
     void Start()
