@@ -3,7 +3,7 @@ Game Oasis San Francisco
 
 A game about two intergalactic lovers who are separated by the endless space, your quest is to find your significant other while avoiding all obstacles that the space has to throw on you .This Journey is not going to be easy, you will discover enemies, you will face hostility! believe in your bond and that will keep you going.
 
-This game was made With contentos blockchain integration.
+This game was made with **Contentos Blockchain integration.**
 
 # How to launch the game :rocket:
 
