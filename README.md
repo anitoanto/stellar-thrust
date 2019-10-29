@@ -9,7 +9,7 @@ This game was made with **Contentos Blockchain integration.**
 
 To launch the build navigate to Windows Export Folder and run StellarThrust.exe file and enjoy the Game!
 
-Code for integration of this game with *Contentos Blockchain* for in-game transactions can be found here **[hello-block-cos](https://github.com/gaharavara/hello-block-cos)**
+Code for integration of this game with ***Contentos Blockchain*** for in-game transactions can be found here **[hello-block-cos](https://github.com/gaharavara/hello-block-cos)**
 
 
 # Made with :heart:
